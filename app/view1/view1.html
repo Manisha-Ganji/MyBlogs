@@ -1,4 +1,6 @@
-<div class="container" ng-controller="View1Ctrl">
+
+<br><br><br><br><br>
+<div class="container bg-info" ng-controller="View1Ctrl">
 <br>
         <h1 style=" font-weight: bold; text-align: center;">Start Exploring</h1> <br>
         <div class="row">
@@ -14,8 +16,12 @@
                     </div>
 
                     <button class="btn btn-primary center-block" ng-click="submit()">Submit</button><br><br>
-                      <div ng-if="flag"><p style="font-size: 15px; color:red;">Please enter valid "email or password"</p></div>
-                </form><br>
-            </div>
+                    </form>
+                    </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 text-center" ng-if="flag"><p style="font-size: 15px; color:red;">Please enter valid "email or password"</p></div>
+                      </div>
+                    
 </div>
-</div>
+
