@@ -1,0 +1,21 @@
+<div class="container" ng-controller="View1Ctrl">
+<br>
+        <h1 style=" font-weight: bold; text-align: center;">Start Exploring</h1> <br>
+        <div class="row">
+            <div class="col-md-4">
+                <form>
+                    <div class="form-group" style="padding: 10px;">
+                        <label style="font-size: 30px;">E-Mail ID</label>
+                        <input type="email" class="form-control" placeholder="email" ng-model="formModel.emailInput" required="" />
+                    </div>
+                    <div class="form-group" style="padding: 10px;">
+                        <label style="font-size: 30px;">Password</label>
+                        <input type="password" class="form-control" placeholder="password" ng-model="formModel.passwordInput" />
+                    </div>
+
+                    <button class="btn btn-primary center-block" ng-click="submit()">Submit</button><br><br>
+                      <div ng-if="flag"><p style="font-size: 15px; color:red;">Please enter valid "email or password"</p></div>
+                </form><br>
+            </div>
+</div>
+</div>

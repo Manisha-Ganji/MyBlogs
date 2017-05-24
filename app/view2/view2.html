@@ -1,0 +1,45 @@
+<div class="container" ng-controller="View2Ctrl">
+<br>
+         <div class="row">
+         <div class="col-md-6 text-left"><a class="btn btn-primary" ng-click="submit();">HOME</a></div>
+        <div class="col-md-6 text-right"><a class="btn btn-primary" ng-click="submit();">LOGOUT</a></div></div>
+
+        <br><br>
+         
+        
+        
+        <div class="row" ng-repeat="nb in newBlog">
+        <form>
+        <div class="col-md-6 text-left">
+         <h4>Serial number:</h4><input class="form-control" type="text" ng-model="nb.id"/><br>
+        <h4>TITLE:</h4><input class="form-control" type="text" ng-model="nb.titleInput" /><br>
+        <h4>BLOG:</h4><textarea class="form-control" rows="7" cols="50" ng-model="nb.blogInput"></textarea><br>
+        <a class="btn btn-success" ng-click="add(nb);">ADD</a>
+        </div>
+        </form>
+        </div>
+       
+
+
+        <br><br>
+
+        <div ng-repeat="blog in blogsArray">
+        <div class="container" style="border: 2px solid; border-radius: 10px;">
+        <div class="row">
+        <div class="col-md-12">
+        <h3>TITLE</h3>
+        <h4>{{blog.titleInput}}</h4>
+        <h3>BLOG</h3>
+        <h4>{{blog.blogInput}}</h4>
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-12 text-right"><a class="btn btn-danger" ng-click="delete(blog.id);">Delete</a></div>
+        </div>
+        <br><br>
+        </div>
+        <br><br>
+        </div>
+        <br><br>
+</div>
+ 
