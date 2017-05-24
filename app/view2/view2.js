@@ -7,7 +7,7 @@ angular.module('myApp.view2', ['ngRoute'])
     });
 }])
 
-.controller('View2Ctrl', ['$scope', '$log','$location', function($scope, $log, $location) {
+.controller('View2Ctrl', ['$scope', '$log','$location','$window', function($scope, $log, $location,$window) {
 
 
 	$scope.pageName = 'BLOG';
@@ -22,30 +22,34 @@ angular.module('myApp.view2', ['ngRoute'])
 
 	$scope.blogsArray=[];
 
-	$scope.newBlog=[{
-	  id:'',
-      titleInput:'',
-      blogInput:''
-	}];
-		
-var id;
-	$scope.add=function(nb){
-
-        		//$scope.nb.titleInput=null;
-		//$scope.nb.blogInput=null;
+$scope.add=function(nb)
+{
+    if(($scope.nb.titleInput==null)||($scope.nb.blogInput==null)||($scope.nb.id==null))
+    {
+      $scope.flag=1;
+    }
+    else
+    {
+     $scope.flag=0;
 		$scope.blogsArray.push(angular.copy(nb));
-		
-}
+    $scope.nb.titleInput=null;
+    $scope.nb.blogInput=null;
+    $scope.nb.id=null;
 
+    }
 
- //  $scope.delete=function()
-  //  {
-  //        for(var i=0;i<blogsArray.length;i++)
-    //     {
-      //    	if(blog.id==$scope.newBlog.id)
-//
-  //        }
-    //}
+};
 
+ $scope.delete=function(blog)
+   {
+   	   for(var i=0;i<$scope.blogsArray.length;i++)
+       {
+          if(blog.id==$scope.blogsArray[i].id)
+          {
+          $scope.blogsArray.splice(i,1);
+          }
+
+        }
+   };
 
 }]);
