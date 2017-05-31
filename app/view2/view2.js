@@ -30,7 +30,7 @@ $scope.add=function(nb)
     }
     else
     {
-     $scope.flag=0;
+    $scope.flag=0;
 		$scope.blogsArray.push(angular.copy(nb));
     $scope.nb.titleInput=null;
     $scope.nb.blogInput=null;

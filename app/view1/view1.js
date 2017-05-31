@@ -11,8 +11,8 @@ templateUrl: 'view1/view1.html'
     $scope.pageName = 'LOGIN';
 
 	var me = {
-	email:'manishaganji187@gmail.com',
-	password:'manisha187'
+	email:'manisha@gmail.com',
+	password:'manisha'
 	};
 
      

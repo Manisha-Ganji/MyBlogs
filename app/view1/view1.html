@@ -1,17 +1,19 @@
 
+<div class="container" ng-controller="View1Ctrl">
 <br><br><br><br><br>
-<div class="container bg-info" ng-controller="View1Ctrl">
-<br>
-        <h1 style=" font-weight: bold; text-align: center;">Start Exploring</h1> <br>
+        <div class="row">
+        <div col-md-6>
+        <p style=" font-weight: bold;color:white;font-size:45px;">START EXPLORING</p>
+        </div></div> <br><br>
         <div class="row">
             <div class="col-md-4">
                 <form>
                     <div class="form-group" style="padding: 10px;">
-                        <label style="font-size: 30px;">E-Mail ID</label>
+                        <label style="font-size: 20px;color:white;">E-MAIL ID</label>
                         <input type="email" class="form-control" placeholder="email" ng-model="formModel.emailInput" required="" />
                     </div>
                     <div class="form-group" style="padding: 10px;">
-                        <label style="font-size: 30px;">Password</label>
+                        <label style="font-size: 20px;color:white;">PASSWORD</label>
                         <input type="password" class="form-control" placeholder="password" ng-model="formModel.passwordInput" />
                     </div>
 
@@ -24,4 +26,5 @@
                       </div>
                     
 </div>
+
 
